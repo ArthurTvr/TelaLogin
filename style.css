@@ -185,7 +185,7 @@ table {
     align-items: center;
     justify-content: center;
     background-color: #58af9c;
-
+    transition: 0.3s;
 }
 
 .register-content {
@@ -197,7 +197,6 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
 }
 
 .imgs-resister img {
@@ -207,8 +206,11 @@ table {
     border-radius: 20px;
     padding: 10px;
     margin: 10px 20px;
+    transition: 0.2s;
 }
-
+.imgs-resister img:hover{
+    background-color: #51a08f;
+}
 #register-title {
     justify-content: center;
     align-items: center;
@@ -254,13 +256,17 @@ table {
 }
 
 .input {
+    border-radius: 10px;
     display: flex;
     margin-bottom: 10px;
     padding: 15px 55px 15px 7px;
     background-color: rgb(220, 220, 220);
     width: 35%;
 }
-
+input::placeholder {
+    color: var(--placeholder-color, gray); /* Define uma cor padrão */
+    opacity: 1; /* Garante visibilidade */
+}
 .button-sgup{
     cursor: pointer;
     color: #ffffff;

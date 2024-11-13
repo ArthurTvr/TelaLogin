@@ -11,12 +11,12 @@
 
 <body>
     <div class="content">
-        <div class="welcome-content">
+        <div class="welcome-content" id="welcometitle">
             <p id="welcome">BEM VINDO DE VOLTA!</p>
             <p id="text-welcome">Para se manter conectado conosco, faça login com suas informações pessoais </p>
-            <button class="button-sgin">SIGN IN</button>
+            <button class="button-sgin" onclick="singin()">SIGN IN</button>
         </div>
-        <div class="register-content">
+        <div class="register-content" id="registerArea">
             <p id="register-title">Crie uma conta</p>
 
             <span id="text-register">use seu email para se cadastrar:</span>
@@ -44,6 +44,17 @@
 </body>
 
     <script>
+        function singin(){
+            console.log("to aqui")
+            const divregister = document.getElementById('registerArea');
+            divregister.style.display="none";
+
+            const divsign = document.getElementById('welcometitle');
+            divsign.style.width="65%";
+            divsign.style.borderRadius="3%"
+    
+        }
+
         function signup(){
             const name = document.getElementById('nome').value;
             console.log(name);
@@ -54,13 +65,16 @@
 
             if (password === ''){
                 console.log("senha invalida");
-                document.getElementById('input_password').style.backgroundColor = "rgb(255 116 116)";
+               const divPass = document.getElementById('input_password');
+               divPass.style.backgroundColor = "rgb(255 116 116)";
 
             }else{
                 console.log("senha ok");
                 document.getElementById('input_password').style.backgroundColor = "rgb(220, 220, 220)";
+                document.getElementById('input_password').style.placeholder = "rgb(220, 220, 220)";
             }
         }
+         
     </script>
 
 </html>
