@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,13 @@
 
             <span id="text-register">use seu email para se cadastrar:</span>
 
-            <div class="input">
+            <div id="input_name" class="input">
                 <input type="text" id="nome" placeholder="Name">
             </div>
-            <div class="input">
+            <div id="input_email" class="input">
                 <input type="text" id="email" placeholder="Email">
             </div>
-            <div class="input">
+            <div id="input_password" class="input">
                 <input type="password" id="password" placeholder="Password">
             </div>
 
@@ -36,14 +36,31 @@
                 <img src="./assets/google.png" alt="google">
                 <img src="./assets/link.png" alt="linkedln">
             </div>
-            <button class="button-sgup">
+            <button class="button-sgup" onclick="signup()">
                 SIGN UP
             </button>
         </div>
-
-
-
     </div>
 </body>
+
+    <script>
+        function signup(){
+            const name = document.getElementById('nome').value;
+            console.log(name);
+            const email = document.getElementById('email').value;
+            console.log(email);
+            const password = document.getElementById('password').value;
+            console.log(password);
+
+            if (password === ''){
+                console.log("senha invalida");
+                document.getElementById('input_password').style.backgroundColor = "rgb(255 116 116)";
+
+            }else{
+                console.log("senha ok");
+                document.getElementById('input_password').style.backgroundColor = "rgb(220, 220, 220)";
+            }
+        }
+    </script>
 
 </html>
