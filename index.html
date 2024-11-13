@@ -15,6 +15,7 @@
             <p id="welcome">BEM VINDO DE VOLTA!</p>
             <p id="text-welcome">Para se manter conectado conosco, faça login com suas informações pessoais </p>
             <button class="button-sgin" onclick="singin()">SIGN IN</button>
+            <button class="voltar_signup" id="btnvoltar" onclick="voltar()"><p>SING UP</p></button>
         </div>
         <div class="register-content" id="registerArea">
             <p id="register-title">Crie uma conta</p>
@@ -52,9 +53,10 @@
             const divsign = document.getElementById('welcometitle');
             divsign.style.width="65%";
             divsign.style.borderRadius="3%"
-    
+            const buttonvoltar = document.getElementById('btnvoltar');
+            buttonvoltar.style.display="flex"
         }
-
+        
         function signup(){
             const name = document.getElementById('nome').value;
             console.log(name);
@@ -74,7 +76,15 @@
                 document.getElementById('input_password').style.placeholder = "rgb(220, 220, 220)";
             }
         }
-         
+        function voltar(){
+            const divregister = document.getElementById('registerArea');
+            divregister.style.display="flex";
+            const divsign = document.getElementById('welcometitle');
+            divsign.style.width="30%";
+            divsign.style.borderRadius="0%"
+            const buttonvoltar = document.getElementById('btnvoltar');
+            buttonvoltar.style.display="none";
+        } 
     </script>
 
 </html>

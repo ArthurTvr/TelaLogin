@@ -187,7 +187,20 @@ table {
     background-color: #58af9c;
     transition: 0.3s;
 }
+.voltar_signup {
+    margin: 20px;
+    display: none;
+    align-items: end;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+    margin-top: 30px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #58af9c;
 
+}
 .register-content {
     border-radius: 0px 10px 10px 0px;
     width: 55%;
